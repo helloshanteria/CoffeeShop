@@ -19,7 +19,7 @@ public class ShanteriaJohnson_Driver {
         ArrayList<String> flavors = new ArrayList<>();
         ArrayList<Double> flavorPrices = new ArrayList<>();
 
-        //User input for different coffee types
+        //User input for coffee types
         System.out.println("Enter a coffee type (type end to stop): ");
         String coffeeType = scanner.nextLine();
 
@@ -29,7 +29,7 @@ public class ShanteriaJohnson_Driver {
             coffeeType = scanner.nextLine();
         }
 
-        //User input for coffee prices
+        //Coffee type prices
         for (int i = 0; i < coffeeTypes.size(); i++) {
             System.out.println("Enter price for " + coffeeTypes.get(i) + ": ");
             double price = scanner.nextDouble();
@@ -37,7 +37,7 @@ public class ShanteriaJohnson_Driver {
         }
         scanner.nextLine();
 
-        //User input for different coffee flavors
+        //User input for coffee flavors
         System.out.println("Enter a flavor (type end to stop): ");
         String coffeeFlavor = scanner.nextLine();
 
@@ -48,7 +48,7 @@ public class ShanteriaJohnson_Driver {
             coffeeFlavor = scanner.nextLine();
         }
 
-        //User input for coffee flavors
+        //Coffee flavors prices
         for (int i = 0; i < flavors.size(); i++) {
             System.out.println("Enter price for " + flavors.get(i) + ": ");
             double price = scanner.nextDouble();
@@ -56,10 +56,42 @@ public class ShanteriaJohnson_Driver {
         }
         scanner.nextLine();
 
+        //Part 1: Welcome Customer & Add Items to Shopping Cart
         System.out.println("Welcome to Shanteria's Coffee Shop!");
         System.out.println("Enter your name: ");
         String customerName = scanner.nextLine();
 
+        //Coffee Menu
+        ArrayList<Coffee> coffee1 = new ArrayList<>();
+
+        while (true) {
+            System.out.println("Choose a coffee type (or type 0 to end): ");
+            System.out.println("1. " + coffeeTypes.get(0));
+            System.out.println("2. " + coffeeTypes.get(1));
+            System.out.println("3. " + coffeeTypes.get(2));
+            System.out.println("4. " + coffeeTypes.get(3));
+            System.out.println("0. End");
+
+            int choice = scanner.nextInt();
+
+            if (choice == 1) {
+                Coffee c1 = new Coffee(coffeeTypes.get(0), coffeePrices.get(0));
+                coffee1.add(c1);
+            } else if (choice == 2) {
+                Coffee c2 = new Coffee(coffeeTypes.get(1), coffeePrices.get(1));
+                coffee1.add(c2);
+            } else if (choice == 3) {
+                Coffee c3 = new Coffee(coffeeTypes.get(2), coffeePrices.get(2));
+                coffee1.add(c3);
+            } else if (choice == 4) {
+                Coffee c4 = new Coffee(coffeeTypes.get(3), coffeePrices.get(3));
+                coffee1.add(c4);
+            } else {
+                break;
+            }
+        }
+
+        //Flavor Menu
         ArrayList<Flavor> flavor1 = new ArrayList<>();
 
         while (true) {
@@ -70,7 +102,7 @@ public class ShanteriaJohnson_Driver {
             System.out.println("0. End");
 
             int choice = scanner.nextInt();
-
+        //For Customer Choices
             if (choice == 1) {
                 Flavor flavor2 = new Flavor(flavors.get(0), flavorPrices.get(0));
                 flavor1.add(flavor2);
@@ -83,8 +115,20 @@ public class ShanteriaJohnson_Driver {
             } else {
                 break;
             }
+        //Shopping Cart & Total
+            double total = 0;
 
+            for (int i = 0; i < coffee1.size(); i++) {
+                total += coffee1.get(i).getPrice();
+            }
 
+            for (int i = 0; i < flavor1.size(); i++) {
+                total += flavor1.get(i).getFPrice();
+            }
+
+            System.out.println(customerName + ", your total balance is $" + total);
+
+            scanner.close();
         }
     }
 }
