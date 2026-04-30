@@ -54,11 +54,37 @@ public class ShanteriaJohnson_Driver {
             double price = scanner.nextDouble();
             flavorPrices.add(price);
         }
+        scanner.nextLine();
 
         System.out.println("Welcome to Shanteria's Coffee Shop!");
         System.out.println("Enter your name: ");
         String customerName = scanner.nextLine();
-        System.out.println("Choose a coffee type: ");
 
+        ArrayList<Flavor> flavor1 = new ArrayList<>();
+
+        while (true) {
+            System.out.println("Choose a flavor (or type 0 to end): ");
+            System.out.println("1. " + flavors.get(0));
+            System.out.println("2. " + flavors.get(1));
+            System.out.println("3. " + flavors.get(2));
+            System.out.println("0. End");
+
+            int choice = scanner.nextInt();
+
+            if (choice == 1) {
+                Flavor flavor2 = new Flavor(flavors.get(0), flavorPrices.get(0));
+                flavor1.add(flavor2);
+            } else if (choice == 2) {
+                Flavor flavor3 = new Flavor(flavors.get(1), flavorPrices.get(1));
+                flavor1.add(flavor3);
+            } else if (choice == 3) {
+                Flavor flavor4 = new Flavor(flavors.get(2), flavorPrices.get(2));
+                flavor1.add(flavor4);
+            } else {
+                break;
+            }
+
+
+        }
     }
 }
