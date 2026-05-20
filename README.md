@@ -1,45 +1,36 @@
 # Coffee Shop Ordering System
 
-This project is a Java console-based coffee shop ordering system created for my Programming Fundamentals course. The program allows a customer to select coffee options, choose flavors, and calculate the total price of their order.
+A Java console-based ordering system that simulates a coffee shop transaction, including customer selections, flavor options, pricing calculations, and order organization using multiple classes.
 
-## Project Purpose
+## Project Overview
+This project was created for my Programming Fundamentals course to practice object-oriented programming and structured problem-solving in Java.
 
-The purpose of this project was to practice core Java programming concepts, including:
+The program allows a customer to select coffee options, choose flavors, and calculate the total price of their order.
 
+## Skills Demonstrated
+- Java programming
+- Object-oriented programming
 - Classes and objects
-- Constructors
-- Methods
-- Conditional statements
+- Constructors and methods
+- Conditional logic
 - User input
-- Arrays or menu selections
-- Basic calculations
-- Object interaction between classes
-
-## Features
-
-- Displays a coffee menu
-- Displays a flavor menu
-- Allows the customer to make selections
-- Stores customer order details
-- Calculates the total price
-- Uses separate classes to organize the program
+- Arrays/menu selections
+- Price calculations
+- Multi-class program organization
 
 ## Classes Used
-
 - `Customer`
 - `Coffee`
 - `Flavor`
 - `ShoppingTray`
-- `Driver`
+- `ShanteriaJohnson_Driver`
 
-## Example Calculation
+## Business Connection
+This project connects programming fundamentals to a real-world business workflow. A coffee shop ordering system requires customer input, menu options, pricing logic, and transaction flow, which are the same types of structured processes used in business and operational systems.
 
-The `ShoppingTray` class calculates the total price by adding the coffee price and flavor price together.
-
-```java
-public double getTotalPrice() {
-    double cPrice = coffee.getPrice();
-    double fPrice = flavor.getFPrice();
-    double totalPrice = cPrice + fPrice;
-    return totalPrice;
-}
+## Future Improvements
+- Add inventory tracking
+- Store order history in a database
+- Add SQL integration
+- Generate daily sales reports
+- Create a simple dashboard for order trends
