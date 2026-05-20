@@ -34,3 +34,45 @@ This project connects programming fundamentals to a real-world business workflow
 - Add SQL integration
 - Generate daily sales reports
 - Create a simple dashboard for order trends
+
+## Screenshots
+
+### Program Setup & Coffee Inventory Input
+This section allows the shop owner to enter coffee types and inventory information for the coffee shop system.
+
+![Coffee Inventory Input](screenshots/setup-coffee-input.png)
+
+---
+
+### Coffee & Pricing Input
+The system allows coffee pricing information to be entered dynamically through user input, simulating menu setup and operational configuration.
+
+![Price Input](screenshots/price-input.png)
+
+---
+
+### Flavor Configuration Input
+The program supports customizable flavor options and flavor pricing additions for customer orders.
+
+![Flavor Setup](screenshots/flavor-setup.png)
+
+---
+
+### Customer Ordering Workflow
+Customers can select coffee options and flavors through a menu-driven ordering process.
+
+![Customer Ordering Workflow](screenshots/customer-ordering.png)
+
+---
+
+### Order Processing & Balance Calculation
+The program calculates customer totals based on selected menu items and flavor additions.
+
+![Balance Calculation](screenshots/balance-calculation.png)
+
+---
+
+### Multi-Class Java Structure
+The project uses multiple Java classes to organize customer data, coffee selections, flavors, and shopping tray functionality.
+
+![Java Class Structure](screenshots/class-structure.png)
